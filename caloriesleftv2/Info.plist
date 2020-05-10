@@ -60,5 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Hello we need to share your data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Hello we need to update your data</string>
 </dict>
 </plist>

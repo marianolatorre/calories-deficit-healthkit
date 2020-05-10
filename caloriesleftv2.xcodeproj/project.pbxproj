@@ -13,6 +13,10 @@
 		46E3825C2468995700C62E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E3825A2468995700C62E28 /* Main.storyboard */; };
 		46E3825E2468995700C62E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E3825D2468995700C62E28 /* Assets.xcassets */; };
 		46E382612468995700C62E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E3825F2468995700C62E28 /* LaunchScreen.storyboard */; };
+		46E3826B2468999300C62E28 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E3826A2468999300C62E28 /* HealthKit.framework */; };
+		46E3826D246899CC00C62E28 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3826C246899CC00C62E28 /* HealthKitSetupAssistant.swift */; };
+		46E3826F246899F900C62E28 /* CaloriesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3826E246899F900C62E28 /* CaloriesDataStore.swift */; };
+		46E3827124689A6A00C62E28 /* CaloriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E3827024689A6A00C62E28 /* CaloriesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		46E3825D2468995700C62E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E382602468995700C62E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E382622468995700C62E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E382682468999300C62E28 /* caloriesleftv2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = caloriesleftv2.entitlements; sourceTree = "<group>"; };
+		46E3826A2468999300C62E28 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		46E3826C246899CC00C62E28 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		46E3826E246899F900C62E28 /* CaloriesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesDataStore.swift; sourceTree = "<group>"; };
+		46E3827024689A6A00C62E28 /* CaloriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E3826B2468999300C62E28 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				46E382532468995700C62E28 /* caloriesleftv2 */,
 				46E382522468995700C62E28 /* Products */,
+				46E382692468999300C62E28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +67,27 @@
 		46E382532468995700C62E28 /* caloriesleftv2 */ = {
 			isa = PBXGroup;
 			children = (
+				46E382682468999300C62E28 /* caloriesleftv2.entitlements */,
 				46E382542468995700C62E28 /* AppDelegate.swift */,
 				46E382562468995700C62E28 /* SceneDelegate.swift */,
 				46E382582468995700C62E28 /* ViewController.swift */,
+				46E3826C246899CC00C62E28 /* HealthKitSetupAssistant.swift */,
+				46E3826E246899F900C62E28 /* CaloriesDataStore.swift */,
+				46E3827024689A6A00C62E28 /* CaloriesManager.swift */,
 				46E3825A2468995700C62E28 /* Main.storyboard */,
 				46E3825D2468995700C62E28 /* Assets.xcassets */,
 				46E3825F2468995700C62E28 /* LaunchScreen.storyboard */,
 				46E382622468995700C62E28 /* Info.plist */,
 			);
 			path = caloriesleftv2;
+			sourceTree = "<group>";
+		};
+		46E382692468999300C62E28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46E3826A2468999300C62E28 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E382592468995700C62E28 /* ViewController.swift in Sources */,
+				46E3827124689A6A00C62E28 /* CaloriesManager.swift in Sources */,
+				46E3826D246899CC00C62E28 /* HealthKitSetupAssistant.swift in Sources */,
 				46E382552468995700C62E28 /* AppDelegate.swift in Sources */,
+				46E3826F246899F900C62E28 /* CaloriesDataStore.swift in Sources */,
 				46E382572468995700C62E28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = caloriesleftv2/caloriesleftv2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9KU2Z4WRE;
 				INFOPLIST_FILE = caloriesleftv2/Info.plist;
@@ -302,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = caloriesleftv2/caloriesleftv2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9KU2Z4WRE;
 				INFOPLIST_FILE = caloriesleftv2/Info.plist;
