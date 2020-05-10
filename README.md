@@ -8,4 +8,4 @@ D- dietary/food energy
 
 Caculates the "deficit" calories based on the above values as (A+R)-D
 
-
+![App screenshot](images/screenshot.jpeg)
