@@ -11,14 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var calories: UILabel!
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        authorizeHealthKit()
+        NotificationCenter.default.addObserver(self, selector: #selector(authorizeHealthKit), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 
-    private func authorizeHealthKit() {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
 
+    @objc private func authorizeHealthKit() {
+        self.calories.text = "Refreshing..."
+        
         HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
 
             guard authorized else {
